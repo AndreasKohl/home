@@ -12,9 +12,9 @@
  *
 */
 /* general */
-define('LOGO', '<i class="fa fa-home"></i> PIHome');
-define('TITLE_DEFAULT', 'PIHome');
-define('COPY', '<b><a href="http://pihome.harkemedia.de" target="_blank" title="PIHOME - Projectsite" id="copylink" title="PiHome">PIHome 2.0</a> &copy '.date('Y').'</b>');
+define('LOGO', '<i class="fa fa-home"></i> Casa');
+define('TITLE_DEFAULT', 'Casa');
+define('COPY', ' &copy '.date('Y').'</b>');
 
 /* Navigation */
 define('NAV_home', 'Lamps');

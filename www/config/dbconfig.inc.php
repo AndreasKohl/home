@@ -20,7 +20,7 @@ define('DB_NAME', 'pihome');
 define('DB_CHARSET', 'utf8');
 define('PREFIX', 'pi_');
 
-define('LANGUAGE', 'en');
+define('LANGUAGE', 'de');
 define('BASE', 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('SERVER_PATH', '/home/www/');
 
