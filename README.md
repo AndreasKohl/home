@@ -1,7 +1,7 @@
 # Download Repository from GitHub
-* cd /home/downloads/
+* cd /home/
 * git clone https://github.com/AndreasKohl/Home.git
-* cp -r /home/downloads/Home/* /home/
+* cp -r /home/Home/* /home/
 
 
 # install wiringPI
@@ -27,14 +27,14 @@
 
 ### change webserver directory
 * nano /etc/apache2/sites-available/default
-DocumentRoot /var/www to DocumentRoot /home/www
-Directory /var/www to Directory /home/www
+* DocumentRoot /var/www to DocumentRoot /home/www
+* Directory /var/www to Directory /home/www
 
 ### change for mod_rewrite
 * AllowOverride None            ->   AllowOverride FileInfo
 
- "ctrl + o" = save  
- "ctrl + x" = close
++ "ctrl + o" = save  
++ "ctrl + x" = close
  
 ### Restart Apache2
 * /etc/init.d/apache2 restart
