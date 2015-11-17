@@ -272,10 +272,15 @@ h3{
 
 
 /*  Responsive  END  */	
-#myWeather h3 i{
-    
+#myWeather h3,
+#myWeather h4{
+    text-align: right;
+    color: black;
 }
-
+#myWeather h4 small{
+    text-align: right;
+    color: black;
+}
 
 
 

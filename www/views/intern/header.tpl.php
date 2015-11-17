@@ -107,7 +107,15 @@ if($settings['weather_option']=="c_kms"){
         <h4 class="modal-title" id="myWeatherLabel"><small><?php echo WEATHER_TITLE." ".$settings['city'].",".$settings['country_code'];?> - <?php echo date('H:i');?> <?php echo WEATHER_CLOCK;?></small></h4>
       </div>
       <div class="modal-body">        
-        <div class="row">             
+        <div class="row">   
+          <div class="col-xs-4">
+            <i class="owf owf-<?php echo $weather['weather_code'];?>" style="font-size:3em;"></i>
+          </div>
+          <div class="col-xs-8">
+            <h4><?php echo $settings['city']; ?></h4>
+            <h3> <?php echo $weather['title'];?> <br/> <small><?php echo $weather['description'];?> <?php echo $temp." ".$tsign;?></small></h3>
+          </div>
+                    
             <div class="col-xs-10 col-sm-10 col-md-10">
                 <h3><i class="owf owf-<?php echo $weather['weather_code'];?>"></i> <?php echo $weather['title'];?> <br/> <small><?php echo $weather['description'];?></small></h3>
             </div>            
