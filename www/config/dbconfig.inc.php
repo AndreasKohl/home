@@ -15,7 +15,7 @@
 /* MySql Daten */
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'root');
+define('DB_PASS', 'webguest');
 define('DB_NAME', 'pihome');
 define('DB_CHARSET', 'utf8');
 define('PREFIX', 'pi_');
