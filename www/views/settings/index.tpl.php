@@ -47,6 +47,12 @@
                 <input type="text" name="city" value="<?php echo $settings['city']; ?>" class="form-control"><br>
               </div>
             </div>
+            <div class="form-group">
+              <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo SET_api;?></label>                
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <input type="text" name="weather_api" value="<?php echo $settings['weather_api']; ?>" class="form-control"><br>
+              </div>
+            </div>
             
             <div class="form-group">
               <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo SET_timezone;?></label>                

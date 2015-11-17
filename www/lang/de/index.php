@@ -119,6 +119,7 @@ define('SET_caldav', 'CalDAV Kalender');
 define('SET_user', 'Benutzer');
 define('SET_pass', 'Passwort');
 define('SET_caldav_url', 'CalDav Url');
+define('weather_api', 'OpenWeather API Key');
 
 /* Edit Password */    
 define('PWCH_HEADLINE', 'Passwort ändern');
