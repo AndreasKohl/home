@@ -78,7 +78,9 @@ if($settings['weather_option']=="c_kms"){
             <?php } ?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">
-              <span class="circle_home" style="background-color:<?php echo $userdata['color'];?>;"><?php echo name($userdata['name']); ?></span>   <b class="fa fa-chevron-down"></b></a>
+              <span class="circle_home" style="background-color:<?php echo $userdata['color'];?>;">
+                  <?php echo name($userdata['name']); ?>
+              </span>   <b class="fa fa-chevron-down"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="home/pwchange/"><i class="fa fa-pencil"></i> <?php echo NAV_edit_pass;?></a></li> 
                 <li><a href="login/logout/"><i class="fa fa-sign-out"></i> <?php echo NAV_signout;?></a></li>  
