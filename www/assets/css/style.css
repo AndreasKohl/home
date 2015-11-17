@@ -272,16 +272,30 @@ h3{
 
 
 /*  Responsive  END  */	
+.modal-content{
+    border-radius: 0px !important;
+}
+
 #myWeather h3,
 #myWeather h4{
     text-align: right;
     color: black;
 }
-#myWeather h4 small{
+#myWeather h3 small{
     text-align: right;
     color: black;
 }
-
+#myWeather i{
+    font-size: 140px;
+}
+#myWeather current-weather{
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+}
+#myWeather forecast-weather{
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+}
 
 
 

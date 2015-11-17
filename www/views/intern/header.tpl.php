@@ -107,26 +107,22 @@ if($settings['weather_option']=="c_kms"){
         <h4 class="modal-title" id="myWeatherLabel"><small><?php echo WEATHER_TITLE." ".$settings['city'].",".$settings['country_code'];?> - <?php echo date('H:i');?> <?php echo WEATHER_CLOCK;?></small></h4>
       </div>
       <div class="modal-body">        
-        <div class="row">   
-          <div class="col-xs-4">
-            <i class="owf owf-<?php echo $weather['weather_code'];?>" style="font-size:3em;"></i>
+        <div class="row current-weather">   
+          <div class="col-xs-4 col-xs-offset-2">
+            <i class="owf owf-<?php echo $weather['weather_code'];?>" style="font-size:140px;"></i>
           </div>
-          <div class="col-xs-8">
+          <div class="col-xs-4">
             <h4><?php echo $settings['city']; ?></h4>
             <h3> <?php echo $weather['title'];?> <br/> <small><?php echo $weather['description'];?> <?php echo $temp." ".$tsign;?></small></h3>
           </div>
-                    
-            <div class="col-xs-10 col-sm-10 col-md-10">
-                <h3><i class="owf owf-<?php echo $weather['weather_code'];?>"></i> <?php echo $weather['title'];?> <br/> <small><?php echo $weather['description'];?></small></h3>
-            </div>            
+            </div>
+                        
+        <div class="row forecast-weather">                
             <div class="col-xs-7 col-sm-6 col-md-6 wdata">
                 <?php echo WEATHER_SUNRISE;?>: <?php echo date('H:i', $weather['sunrise']);?> <?php echo WEATHER_CLOCK;?><br>
                 <?php echo WEATHER_SUNSET;?>: <?php echo date('H:i', $weather['sunset']);?> <?php echo WEATHER_CLOCK;?><br>
                 <?php echo WEATHER_WIND;?>: <?php echo $wind;?> <?php echo $wsign;?>
-            </div>              
-            <div class="col-xs-5 col-sm-6 col-md-6">
-                <span class="pull-right degrees"><?php echo $temp." ".$tsign;?></span>
-            </div> 
+            </div>     
                     
         </div>  	            
       </div>     
