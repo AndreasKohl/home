@@ -27,6 +27,7 @@ if($settings['weather_option']=="c_kms"){
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-colorpicker.min.css" rel="stylesheet">   
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/weather-icons.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
@@ -108,7 +109,8 @@ if($settings['weather_option']=="c_kms"){
       <div class="modal-body">        
         <div class="row">             
             <div class="col-xs-10 col-sm-10 col-md-10">
-                <h3><span><img border="0" src="assets/weather/<?php echo $weather['icon'];?>.png" title="<?php echo $weather['title'];?> - <?php echo $weather['description'];?>"></span> <span><?php echo $weather['title'];?> - <?php echo $weather['description'];?></span></h3>
+                <h3><i class="wi <?php echo $weather['icon'];?>"></i><span>
+                  <img border="0" src="assets/weather/<?php echo $weather['icon'];?>.png" title="<?php echo $weather['title'];?> - <?php echo $weather['description'];?>"></span> <span><?php echo $weather['title'];?> - <?php echo $weather['description'];?></span></h3>
             </div>            
             <div class="col-xs-7 col-sm-6 col-md-6 wdata">
                 <?php echo WEATHER_SUNRISE;?>: <?php echo date('H:i', $weather['sunrise']);?> <?php echo WEATHER_CLOCK;?><br>

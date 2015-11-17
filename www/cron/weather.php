@@ -23,8 +23,14 @@ $city = $settings['city'];
 $land = $settings['country_code'];
 $api_key=$settings['weather_api'];
 // Get Weather Data per openweathermap api
-$weather_api = "http://api.openweathermap.org/data/2.5/weather?q=".$city.",".$land."&appid".$api_key;
-echo $weather_api; //847cf33eee0f8bf8dea6ad3786bae634
+$weather_api = "http://api.openweathermap.org/data/2.5/weather?q=".$city.",".$land."&appid=".$api_key;
 $json = file_get_contents($weather_api);
 file_put_contents('/home/www/weather/weather.json', $json);
+// Get Weather forecast
+$forecast_api = "http://api.openweathermap.org/data/2.5/forecast?q=".$city.",".$land."&mode=json&appid=".$api_key;
+$json_forecast = file_get_contents($forecast_api);
+file_put_contents('/home/www/weather/forecast.json', $json_forecast);
+
+
+
 ?>
