@@ -109,7 +109,7 @@ if($settings['weather_option']=="c_kms"){
       <div class="modal-body">        
         <div class="row">             
             <div class="col-xs-10 col-sm-10 col-md-10">
-                <h3><i class="wi <?php echo $weather['icon'];?>"></i><span>
+                <h3><i class="owf owf-<?php echo $weather['weather_code'];?>"></i><span>
                   <img border="0" src="assets/weather/<?php echo $weather['icon'];?>.png" title="<?php echo $weather['title'];?> - <?php echo $weather['description'];?>"></span> <span><?php echo $weather['title'];?> - <?php echo $weather['description'];?></span></h3>
             </div>            
             <div class="col-xs-7 col-sm-6 col-md-6 wdata">
