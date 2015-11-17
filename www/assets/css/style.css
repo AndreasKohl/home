@@ -275,24 +275,31 @@ h3{
 .modal-content{
     border-radius: 0px !important;
 }
+.modal-body{
+    padding-top: 0px !important;
+}
 
 #myWeather h3,
 #myWeather h4{
     text-align: right;
-    color: black;
+    color: #fcfcfc;
 }
 #myWeather h3 small{
     text-align: right;
-    color: black;
+    color: #fcfcfc;
 }
 #myWeather i{
-    font-size: 140px;
+    font-size: 140px !important;
+    color: #E9E9E9;
+    padding-top: 40px;
 }
-#myWeather current-weather{
+#myWeather .current-weather{
     margin-left: -20px !important;
     margin-right: -20px !important;
+    background: black;
+    color: #fcfcfc;
 }
-#myWeather forecast-weather{
+#myWeather .forecast-weather{
     margin-left: -20px !important;
     margin-right: -20px !important;
 }

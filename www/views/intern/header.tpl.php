@@ -109,7 +109,7 @@ if($settings['weather_option']=="c_kms"){
       <div class="modal-body">        
         <div class="row current-weather">   
           <div class="col-xs-4 col-xs-offset-2">
-            <i class="owf owf-<?php echo $weather['weather_code'];?>" style="font-size:140px;"></i>
+            <i class="owf owf-<?php echo $weather['weather_code'];?>"></i>
           </div>
           <div class="col-xs-4">
             <h4><?php echo $settings['city']; ?></h4>
