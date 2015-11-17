@@ -104,7 +104,7 @@ if($settings['weather_option']=="c_kms"){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myWeatherLabel"><small><?php echo WEATHER_TITLE." ".$settings['city'].",".$settings['country_code'];?> - <?php echo date('H:i');?> <?php echo WEATHER_CLOCK;?></small></h4>
+        <h4 class="modal-title" id="myWeatherLabel"><small><?php echo date('H:i');?> <?php echo WEATHER_CLOCK;?></small></h4>
       </div>
       <div class="modal-body">        
         <div class="row current-weather">   

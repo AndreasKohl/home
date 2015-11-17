@@ -277,31 +277,38 @@ h3{
 }
 .modal-body{
     padding-top: 0px !important;
+    padding-bottom: 0px !important;
 }
 
-#myWeather h3,
-#myWeather h4{
+#myWeather .modal-body h3{
     text-align: right;
     color: #fcfcfc;
 }
-#myWeather h3 small{
+#myWeather .modal-body h4{
+    text-align: right;
+    color: #fcfcfc;
+    padding-top: 55px;
+}
+#myWeather .modal-body h3 small{
     text-align: right;
     color: #fcfcfc;
 }
-#myWeather i{
+#myWeather .modal-body i{
     font-size: 140px !important;
     color: #E9E9E9;
     padding-top: 40px;
 }
-#myWeather .current-weather{
+#myWeather .modal-body .current-weather{
     margin-left: -20px !important;
     margin-right: -20px !important;
     background: black;
     color: #fcfcfc;
 }
-#myWeather .forecast-weather{
+#myWeather .modal-body .forecast-weather{
     margin-left: -20px !important;
     margin-right: -20px !important;
+    background: #0DB2FF;
+    padding: 20px;
 }
 
 
