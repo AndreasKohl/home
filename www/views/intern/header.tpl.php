@@ -24,6 +24,7 @@ if($settings['weather_option']=="c_kms"){
     <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-touch-icon-144-precomposed.png"> 
     <link rel="shortcut icon" href="assets/icon/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-colorpicker.min.css" rel="stylesheet">   
     <link href="assets/css/style.css" rel="stylesheet">

@@ -6,10 +6,12 @@ html {
   height:100%; 
   width:100%; 
   margin:0;
+  font-family: Lato;
 }
 
 body{
 	padding-top:55px;
+  font-family: Lato;
 	margin-bottom: 95px;
 	height:100%; 
 	width:100%; 
@@ -306,7 +308,7 @@ h3{
 }
 #myWeather .weather_temp{
     font-size: 100px;
-    text-align: ccenter;
+    text-align: center;
 }
 #myWeather .modal-body h4{
     text-align: right;
@@ -320,7 +322,6 @@ h3{
 #myWeather .modal-body i{
     font-size: 85px !important;
     color: #E9E9E9;
-    padding-top: 40px;
 }
 #myWeather .modal-body .current-weather{
     margin-left: -20px !important;
