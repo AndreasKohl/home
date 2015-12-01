@@ -132,6 +132,9 @@ h3{
 	text-align: center;
 	color: #FFFFFF;
     font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
     #copylink{
