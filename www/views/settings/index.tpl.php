@@ -24,7 +24,7 @@
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">
             
-            <h2 class="headline"><i class="fa fa-cog"></i> <?php echo SET_HEADLINE;?></h2>
+            <h2 class="headline"><?php echo SET_HEADLINE;?></h2>
             
             <form method="post" class="form-vertical row-border">                   
             <input type="hidden" name="send" value="save">

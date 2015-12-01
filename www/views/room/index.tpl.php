@@ -5,7 +5,7 @@
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">
             
-            <h2 class="headline"><i class="fa fa-lightbulb-o"></i> <?php echo $room_name;?></h2>
+            <h2 class="headline"><?php echo $room_name;?></h2>
             
             
             <ul id="room_devices">

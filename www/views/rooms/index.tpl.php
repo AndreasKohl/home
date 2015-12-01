@@ -85,7 +85,7 @@
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">
             
-            <h2 class="headline"><i class="fa fa-home"></i> <?php echo ROOM_HEADLINE;?> 
+            <h2 class="headline"><?php echo ROOM_HEADLINE;?> 
                 <span class="pull-right">
                     <a href="#" data-toggle="modal" data-target="#add_room" class="btn btn-success"><i class="fa fa-plus"></i> <span class="hidden-xs">
                         <?php echo ROOM_add;?></span>

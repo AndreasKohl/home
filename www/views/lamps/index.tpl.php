@@ -226,7 +226,7 @@
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">
             
-            <h2 class="headline"><i class="fa fa-lightbulb-o"></i> <?php echo LAMP_HEADLINE;?>
+            <h2 class="headline"><?php echo LAMP_HEADLINE;?>
                 <span class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#add_lamp" class="btn btn-success">
                     <i class="fa fa-plus"></i> <span class="hidden-xs"><?php echo LAMP_add;?></span></a>

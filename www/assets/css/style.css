@@ -23,16 +23,24 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
-
-
+.navbar-default .navbar-toggle{
+        background: rgba(0,0,0,0.5);
+    border-color: transparent;
+}
+.navbar-default{
+    background: rgba(0,0,0,0.5);
+    border-color: transparent;
+}
 .navbar-header .btn-default{
-    border-color: white;
+    border-color:rgba(0,0,0,0);
+    background: ttransparent;
+    color: white;
 }
 
 .lights{
     margin-top: 35px;  
     padding-top: 10px;
-    background:rgba(0, 0, 0, 0.25) none repeat scroll 0% 0%;
+    background: transparent;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 8px;
@@ -56,6 +64,11 @@ body{
     font-size: 1.4em;
     font-weight: 100;
 }
+.lights .row{
+    margin-left: -20px !important;
+    background:rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+    margin-bottom: -15px;
+}
 .degrees{
     font-size: 30px;
     font-weight: 100;
@@ -63,14 +76,16 @@ body{
 
 .lighton{
     font-size: 35px;
-    color: #efef1d;
+    color: #FFC;
     margin-left: 30px;
+    margin-top: 7px;
 }
 
 .lightoff{
     font-size: 35px;  
-    color: #5F5F5F;
+    color: #4B4B4B;
     margin-left: 30px;
+    margin-top: 7px;
 }
 
 
