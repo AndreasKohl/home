@@ -287,16 +287,26 @@ h3{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
 }
+#myWeather .modal-header{
+    border-bottom: 0px;
+}
 #myWeather .modal-content{
         background:#f7f7f7 url(../img/weather.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+}
+#myWeather .weather_text{
+    border-left:1px solid white;
 }
 #myWeather .modal-body h3{
-    text-align: right;
     color: #fcfcfc;
+}
+#myWeather .weather_temp{
+    font-size: 100px;
+    text-align: ccenter;
 }
 #myWeather .modal-body h4{
     text-align: right;
@@ -308,7 +318,7 @@ h3{
     color: #fcfcfc;
 }
 #myWeather .modal-body i{
-    font-size: 140px !important;
+    font-size: 85px !important;
     color: #E9E9E9;
     padding-top: 40px;
 }

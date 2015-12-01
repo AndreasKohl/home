@@ -104,21 +104,20 @@ if($settings['weather_option']=="c_kms"){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myWeatherLabel"><small><?php echo date('H:i');?> <?php echo WEATHER_CLOCK;?></small></h4>
       </div>
       <div class="modal-body">        
         <div class="row current-weather">   
-          <div class="col-xs-4 weather_icon">
+          <div class="col-xs-5 weather_icon text-center">
             <i class="owf owf-<?php echo $weather['weather_code'];?>"></i>
           </div>
-          <div class="col-xs-8 weather_text">
+          <div class="col-xs-7 weather_text text-center">
             <h3><?php echo $settings['city']; ?> <br/> <small> <?php echo $weather['title'];?> <?php echo $weather['description'];?> </small></h3>
           </div>
-          <div class="col-xs-12"><?php echo $temp." ".$tsign;?></div>
+          <div class="col-xs-12 weather_temp"><?php echo $temp." ".$tsign;?></div>
             </div>
                         
         <div class="row forecast-weather">                
-            <div class="col-xs-7 col-sm-6 col-md-6 wdata">
+            <div class="col-xs-12 wdata">
                 <?php echo WEATHER_SUNRISE;?>: <?php echo date('H:i', $weather['sunrise']);?> <?php echo WEATHER_CLOCK;?><br>
                 <?php echo WEATHER_SUNSET;?>: <?php echo date('H:i', $weather['sunset']);?> <?php echo WEATHER_CLOCK;?><br>
                 <?php echo WEATHER_WIND;?>: <?php echo $wind;?> <?php echo $wsign;?>
