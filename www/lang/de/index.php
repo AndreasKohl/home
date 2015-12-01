@@ -12,7 +12,7 @@
  *
 */
 /* general */
-define('LOGO', '<i class="fa fa-home"></i> Casa');
+define('LOGO', '<i class="fa fa-home"></i>');
 define('TITLE_DEFAULT', 'Casa');
 define('COPY', ' &copy '.date('Y').'</b>');
 

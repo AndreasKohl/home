@@ -23,7 +23,9 @@ body{
 }
 
 
-
+.navbar-header .btn-default{
+    border-color: none;
+}
 
 .lights{
     margin-top: 35px;  
@@ -44,7 +46,6 @@ body{
         .lights ul li{
             padding-top: 8px;
             padding-bottom: 8px;
-            border-bottom: 1px solid #f9f9f9;
             margin-left: -35px;
         }
 
@@ -62,14 +63,14 @@ body{
 
 .lightoff{
     font-size: 35px;  
-    color: #c0c0c0;
+    color: #5F5F5F;
     margin-left: 30px;
 }
 
 
 .roomicon{
     font-size: 25px;  
-    color: #c0c0c0;
+    color: #5F5F5F;
     margin-left: 30px;
 }
 
