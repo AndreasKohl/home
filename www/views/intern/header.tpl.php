@@ -108,13 +108,13 @@ if($settings['weather_option']=="c_kms"){
       </div>
       <div class="modal-body">        
         <div class="row current-weather">   
-          <div class="col-xs-4 col-xs-offset-2">
+          <div class="col-xs-4 weather_icon">
             <i class="owf owf-<?php echo $weather['weather_code'];?>"></i>
           </div>
-          <div class="col-xs-4">
-            <h4><?php echo $settings['city']; ?></h4>
-            <h3> <?php echo $weather['title'];?> <br/> <small><?php echo $weather['description'];?> <?php echo $temp." ".$tsign;?></small></h3>
+          <div class="col-xs-8 weather_text">
+            <h3><?php echo $settings['city']; ?> <br/> <small> <?php echo $weather['title'];?> <?php echo $weather['description'];?> </small></h3>
           </div>
+          <div class="col-xs-12"><?php echo $temp." ".$tsign;?></div>
             </div>
                         
         <div class="row forecast-weather">                
