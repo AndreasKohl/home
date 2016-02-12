@@ -15,14 +15,14 @@
 /* MySql Daten */
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', 'webguest');
-define('DB_NAME', 'pihome');
+define('DB_PASS', '!1webguest');
+define('DB_NAME', 'home');
 define('DB_CHARSET', 'utf8');
 define('PREFIX', 'pi_');
 
 define('LANGUAGE', 'de');
 define('BASE', 'http://'.$_SERVER['HTTP_HOST'].'/');
-define('SERVER_PATH', '/home/www/');
+define('SERVER_PATH', '/home/pi/home/www/');
 
 function name($name)
 {

@@ -190,17 +190,19 @@ class homeController
         // get device data
         $device = $model->getDeviceById($lampid);
         if($str[1]=="on"){ $lampset="1"; }elseif($str[1]=="off"){ $lampset="0"; }        
-        $letter = escapeshellarg($this->letter($device['letter']));        
-        $co = escapeshellarg($device['code']);
+        $letter = $this->letter($device['letter']);        
+        $co = $device['code'];
         // execute rcswitch-pi
-	shell_exec("sudo /home/pi/rcswitch-pi/send $co $letter $lampset");
-	echo $setlamp;
-	if( $str[1] == "on" ){$espeak ='"Lampe '.$lampid.' ist an"';}
-	else{$espeak ='"Lampe '.$lampid.' ist aus"';}
-	$retval = shell_exec("sudo /usr/bin/espeak -vde+m1 ".$espeak." 2>/dev/null");
+        $output = shell_exec('sudo /home/pi/rcswitch-pi/send '.$co.' '.$letter.' '.$lampset.'');
+	echo $output;
+$handle = popen('sudo /home/pi/rcswitch-pi/send '.$co.' '.$letter.' '.$lampset.'''sudo /home/pi/rcswitch-pi/send '.$co.' '.$letter.' '.$lampset.'', 'r');
+echo "'$handle'; " . gettype($handle) . "\n";
+$read = fread($handle, 2096);
+echo $read;
+pclose($handle);
         // Set device status
         $setlamp = $model->setDeviceStatus($lampid,$lampset);
-	//echo $setlamp;        
+        echo $setlamp;        
     }
   }
     
@@ -215,7 +217,7 @@ class homeController
             $letter = $this->letter($light['letter']);            
             // execute rcswitch-pi
             $output = shell_exec('sudo /home/pi/rcswitch-pi/send '.$light['code'].' '.$letter.' '.$stat.' ');      
-	    //echo $output;
+	    echo $output;
             // Set device status
             $model->setDeviceStatus($light['id'],$stat);
         }
