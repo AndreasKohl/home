@@ -13,7 +13,7 @@ $(document).ready(function(){
     
     <?php if($_GET['a']==="room"){ ?>
         // Get Devices as JSON an add to document
-        getroomdevices(<?php echo $_GET['id']; ?>);
+        //getroomdevices(<?php echo $_GET['id']; ?>);
     <?php }else{ ?>
         // Get Devices as JSON an add to document
         getdevices();
@@ -244,29 +244,17 @@ function ac(letter){
 	var lamp = "#lamp_" + currentid;
 	var btn1 = "#btn1_" + currentid;
 	var btn2 = "#btn2_" + currentid;		
-    if(currentstatus == "off"){              
-        $.get( "index.php?c=home&a=set&id="+letter, function( data ) {            
-        var str = data.split("<!DOCTYPE html>").length - 1;
-        if(str=="1"){ window.location = "home/"; } else {                              
-            if(data=="1"){                
-                $(lamp).attr("class", "fa fa-lightbulb-o lightoff");                
+    $.get( "index.php?c=home&a=set&id="+letter, function( data ) {
+            if(data=="0"){
+                $(lamp).attr("class", "fa fa-lightbulb-o lightoff");
                 $(btn1).attr("class", "btn btn-default");
-                $(btn2).attr("class", "btn btn-primary");                
+                $(btn2).attr("class", "btn btn-primary");
+            }else{
+                $(lamp).attr("class", "fa fa-lightbulb-o lighton");
+                $(btn1).attr("class", "btn btn-primary");
+                $(btn2).attr("class", "btn btn-default");
             }
-        }
-        });
-    }else{
-        $.get( "index.php?c=home&a=set&id="+letter, function( data ) {  
-            var str = data.split("<!DOCTYPE html>").length - 1;
-            if(str=="1"){ window.location = "home/"; } else {                              
-                if(data=="1"){
-                    $(lamp).attr("class", "fa fa-lightbulb-o lighton");                
-                    $(btn1).attr("class", "btn btn-primary");
-                    $(btn2).attr("class", "btn btn-default");                
-                }
-            }
-        });
-    }
+    });
 }
 	
 

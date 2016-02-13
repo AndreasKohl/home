@@ -202,9 +202,9 @@ class homeController
             } else {
                 $espeak = '"Lampe ' . $lampid . ' ist aus"';
             }
-            if($retval = shell_exec("sudo /usr/bin/espeak -vde+m1 " . $espeak . " 2>/dev/null")){
+            shell_exec("sudo /usr/bin/espeak -vde+m1 " . $espeak . " 2>/dev/null");
 
-            }
+
             // Set device status
             $setlamp = $model->setDeviceStatus($lampid, $lampset);
             //echo $setlamp;
