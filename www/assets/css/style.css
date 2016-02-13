@@ -58,7 +58,6 @@ body{
         }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
     border: none;
-    background: rgba(0,0,0,0.7);
 }
 .device{
     font-size: 1.4em;
