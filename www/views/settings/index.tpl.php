@@ -1,25 +1,4 @@
-
-<!--
-
-√sunrise	true
-√city	Berlin
-√country_code	DE
-√timezone
-
-√weather	true
-√weather_option	c_kms / k_mps
-
-√gcal_ical_activ	true
-√gcal_ical	
-
-√oc_ical	true
-√oc_user	
-√oc_pass	
-√oc_ical_url
-
--->
-
-<div class="container">
+<div class="settings">
     <div class="row">
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">

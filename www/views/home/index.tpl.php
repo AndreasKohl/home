@@ -1,6 +1,6 @@
 
 
-<div class="container">
+<div class="home">
     <div class="row">
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">

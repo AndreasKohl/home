@@ -16,6 +16,8 @@ class homeController
     {
 
         require_once 'models/homeModel.php';
+        $model = new homeModel();
+        $user = $model->getUser($_SESSION[user_id]);
         $this->_view->title = TITEL_HOME;
         $this->_view->display('home/index.tpl.php');
     }
@@ -105,7 +107,7 @@ class homeController
             $editUser = $model->updateUser($_POST);
         }
 
-
+        $rooms = $model->getAllRooms();
         $users = $model->getAllUsers();
         $this->_view->title = TITEL_USER;
         $this->_view->users = $users;
@@ -137,7 +139,7 @@ class homeController
     {
         require_once 'models/homeModel.php';
         $model = new homeModel();
-        //$user = $model->getUser($_SESSION[user_id]);
+        $user = $model->getUser($_SESSION[user_id]);
         $err = "";
         $msg = "";
         if ($_POST['send'] == "save") {
@@ -163,7 +165,14 @@ class homeController
     {
         require_once 'models/homeModel.php';
         $model = new homeModel();
-        $lights = $model->getActivDevices();
+        $user = $model->getUser($_SESSION[user_id]);
+        if($user['room'] == 0) {
+            $lights = $model->getActivDevices();
+        }
+        else {
+            $lights = $model->getLampsByRoomId($user['room']);
+        }
+        //$lights = $model->getActivDevices();
         foreach ($lights as $lamp) {
             $arr['id'] = $lamp['id'];
             $arr['room_id'] = $lamp['room_id'];
@@ -175,6 +184,7 @@ class homeController
             $array[] = $arr;
         }
         echo json_encode($array);
+        //echo json_encode($user['room']);
     }
 
 
@@ -197,7 +207,6 @@ class homeController
             $co = escapeshellarg($device['code']);
             // execute rcswitch-pi
             shell_exec("sudo /home/pi/rcswitch-pi/send $co $letter $lampset");
-            echo $lampset;
             if ($str[1] == "on") {
                 $espeak = '"Lampe ' . $lampid . ' ist an"';
             } else {

@@ -10,6 +10,28 @@ $(document).ready(function(){
 	
     // Auto-Open Dropdown Button
     $('.js-activated').dropdownHover().dropdown();
+
+    $(function () {
+        $('.navbar-toggle').click(function () {
+        $('.navbar-nav').toggleClass('slide-in');
+        $('.side-body').toggleClass('body-slide-in');
+        $('#search').removeClass('in').addClass('collapse').slideUp(200);
+
+        /// uncomment code for absolute positioning tweek see top comment in css
+        //$('.absolute-wrapper').toggleClass('slide-in');
+
+        });
+
+        // Remove menu for searching
+        $('#search-trigger').click(function () {
+        $('.navbar-nav').removeClass('slide-in');
+        $('.side-body').removeClass('body-slide-in');
+
+        /// uncomment code for absolute positioning tweek see top comment in css
+        //$('.absolute-wrapper').removeClass('slide-in');
+
+        });
+    });
     
     <?php if($_GET['a']==="room"){ ?>
         // Get Devices as JSON an add to document
@@ -191,7 +213,7 @@ $(function(){
 
 function getdevices(){  
     $("#devices").html("");
-    $.get( "index.php?c=home&a=getlights", function( data ) {  
+    $.get( "/home/getlights/", function( data ) {
          
         var str = data.split("<!DOCTYPE html>").length - 1;
          if(str=="1")
@@ -208,7 +230,7 @@ function getdevices(){
             else{ var onbtn = "btn-default"; var offbtn = "btn-primary"; var lamp = "lightoff"; }
             html = '<div class="row">';
             html += '<div class="col-xs-1 col-sm-1 col-md-1"><i id="lamp_'+value.id+'" class="fa fa-lightbulb-o '+lamp+'"></i></div>';
-            html += '<div class="col-xs-6 col-sm-6 col-md-6"><div class="device">'+value.device+sunset+'</div><small>'+value.room+'</small></div>';
+            html += '<div class="col-xs-6 col-sm-6 col-md-6"><div class="device">'+value.device+sunset+'</div></div>';
             html += '<div class="col-xs-5 col-sm-5 col-md-5">';
             html += '<span class="pull-right">';            
             html += "<a onclick='off(" + value.id + ")' id='btn2_" + value.id + "' class='btn "+offbtn+"'><?php echo BTN_OFF;?></a>";            
@@ -224,7 +246,7 @@ function getdevices(){
 
 
 $('#alloff').click(function() {    
-    $.get( "index.php?c=home&a=alloff", function( data ) {        
+    $.get( "/home/alloff/", function( data ) {
         if(data=="1"){
             location.href="index.php";
         }

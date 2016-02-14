@@ -307,21 +307,27 @@ class homeModel
              name,
              admin,
              color,
-             apikey) VALUES (
+             apikey,
+             room,
+             weather) VALUES (
             :cuser,
             :cpass,
             :cname,
             :cadmin,
             :ccolor,
-            :capikey)";
+            :capikey,
+            :croom,
+            :cweather)";
         $stmt = $this->_con->prepare($sql);                                  
         $stmt->bindParam(':cuser',      $arr['user_name'], PDO::PARAM_STR); 
         $stmt->bindParam(':cpass',      $arr['pass'], PDO::PARAM_STR); 
         $stmt->bindParam(':cname',      $arr['name'], PDO::PARAM_STR); 
         $stmt->bindParam(':cadmin',     $arr['admin'], PDO::PARAM_STR); 
-        $stmt->bindParam(':ccolor',     $arr['color'], PDO::PARAM_STR);              
-        $stmt->bindParam(':capikey',    $arr['apikey'], PDO::PARAM_STR);              
-        $stmt->execute();  
+        $stmt->bindParam(':ccolor',     $arr['color'], PDO::PARAM_STR);
+        $stmt->bindParam(':capikey',    $arr['apikey'], PDO::PARAM_STR);
+        $stmt->bindParam(':croom',      $arr['room'], PDO::PARAM_INT);
+        $stmt->bindParam(':cweather',   $arr['weather'], PDO::PARAM_INT);
+        $stmt->execute();
         $newId = $this->_con->lastInsertId();
         return $newId;  
   }  
@@ -333,14 +339,18 @@ class homeModel
                 user = :cuser,
                 name = :cname,
                 admin = :cadmin,
-                color = :ccolor
+                color = :ccolor,
+                room = :croom,
+                weather = :cweather
                 WHERE id = :userID ";        
         $stmt = $this->_con->prepare($sql);
         $stmt->bindParam(':cuser',      $arr['user_name'], PDO::PARAM_STR); 
         $stmt->bindParam(':cname',      $arr['name'], PDO::PARAM_STR); 
         $stmt->bindParam(':cadmin',     $arr['admin'], PDO::PARAM_STR); 
         $stmt->bindParam(':ccolor',     $arr['color'], PDO::PARAM_STR);         
-        $stmt->bindParam(':userID',     $arr['edituserid'], PDO::PARAM_INT);          
+        $stmt->bindParam(':userID',     $arr['edituserid'], PDO::PARAM_INT);
+        $stmt->bindParam(':croom',      $arr['room'], PDO::PARAM_INT);
+        $stmt->bindParam(':cweather',   $arr['weather'], PDO::PARAM_INT);
         if($stmt->execute()){
             return 1;
         }else{

@@ -98,6 +98,8 @@ define('USER_add', 'Benutzer hinzufügen');
 define('USER_username', 'Benutzername');
 define('USER_name', 'Name');
 define('USER_stats', 'Benutzerstatus');
+define('USER_room', 'Startseite');
+define('USER_weather', 'Wetter auf der Startseite anzeigen?');
 define('USER_color', 'Farbe');
 define('USER_api_key', 'Benutzer Api-Key');
 define('USER_edit_user', 'Benutzer bearbeiten');

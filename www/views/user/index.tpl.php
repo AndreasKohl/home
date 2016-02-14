@@ -86,16 +86,38 @@
                 <input type="text" id="e_pass" class="form-control" disabled><br>
               </div>
             </div>
-            <div class="form-group">
-              <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo USER_stats;?></label>                
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <select name="admin" id="e_admin"  class="form-control">
-                    <option value="1">Admin</option>
-                    <option value="0">User</option>
-                </select>
-                <br>
+              <div class="form-group">
+                  <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo USER_stats;?></label>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                      <select name="admin" id="e_admin"  class="form-control">
+                          <option value="1">Admin</option>
+                          <option value="0">User</option>
+                      </select>
+                      <br>
+                  </div>
               </div>
-            </div>
+              <div class="form-group">
+                  <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo USER_room;?></label>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                      <select name="room" id="e_room"  class="form-control">
+                          <option value="0">Alle</option>
+                          <?php foreach($rooms as $room){ ?>
+                              <option value="<?php echo $room['id'];?>"><?php echo $room['room'];?></option>
+                          <?php } ?>
+                      </select>
+                      <br>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo USER_weather;?></label>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                      <select name="weather" id="e_weather"  class="form-control">
+                          <option value="1">Ja</option>
+                          <option value="0">Nein</option>
+                      </select>
+                      <br>
+                  </div>
+              </div>
             <div class="form-group">
               <label class="col-xs-12 col-sm-12 col-md-12 control-label"><?php echo USER_color;?></label>                
               <div class="col-xs-12 col-sm-12 col-md-12">
@@ -161,7 +183,7 @@
 
 
 
-<div class="container">
+<div class="user">
     <div class="row">
 		 
         <div class="col-xs-12 col-sm-12 col-md-12 lights">

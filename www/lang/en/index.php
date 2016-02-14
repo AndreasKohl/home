@@ -26,6 +26,8 @@ define('NAV_set_devices', 'Lamps');
 define('NAV_set_room', 'Rooms');
 define('NAV_set_user', 'Users');
 define('NAV_calendar', 'calender');
+define('USER_room', 'Homescreen');
+define('USER_weather', 'Weather on Homescreen?');
 define('NAV_set_settings', 'Settings');
 define('NAV_edit_pass', 'Edit Password');
 define('NAV_signout', 'Sign Out');
