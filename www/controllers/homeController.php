@@ -137,7 +137,7 @@ class homeController
     {
         require_once 'models/homeModel.php';
         $model = new homeModel();
-        $user = $model->getUser($_SESSION[user_id]);
+        //$user = $model->getUser($_SESSION[user_id]);
         $err = "";
         $msg = "";
         if ($_POST['send'] == "save") {
@@ -192,6 +192,7 @@ class homeController
             } elseif ($str[1] == "off") {
                 $lampset = "0";
             }
+            echo $lampset;
             $letter = escapeshellarg($this->letter($device['letter']));
             $co = escapeshellarg($device['code']);
             // execute rcswitch-pi

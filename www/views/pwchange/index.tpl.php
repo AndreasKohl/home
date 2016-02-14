@@ -12,7 +12,7 @@
                     <i class="fa fa-exclamation-triangle"></i> <?php echo $err; ?>
                 </div>
              </div>        
-         <? } ?> 
+         <?php } ?>
 
          <?php if($msg!=""){ ?> 
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -20,7 +20,7 @@
                     <i class="fa fa-check-square-o"></i> <?php echo $msg; ?>
                 </div>
             </div>            
-         <? } ?> 
+         <?php } ?>
             
             <h2 class="headline"><i class="fa fa-key"></i> <?php echo PWCH_HEADLINE;?></h2>           
            <form method="post" action="" class="form-vertical row-border">                   
