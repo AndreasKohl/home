@@ -11,8 +11,10 @@
     <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-touch-icon-144-precomposed.png">     
     <link rel="shortcut icon" href="assets/icon/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.css" rel="stylesheet">      
     <link href="assets/css/signin.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>

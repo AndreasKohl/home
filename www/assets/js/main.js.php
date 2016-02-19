@@ -151,12 +151,14 @@ function delRoom(){
     });
 }
 
-function setUser(id,pass,user,name,admin,color){    
+function setUser(id,pass,user,name,admin,color,room,weather){
     $('#edituserid').val(id);
     $('#e_pass').val(pass);
     $('#e_user').val(user);
-    $('#e_name').val(name);    
+    $('#e_name').val(name);
     $('#e_color').val(color);
+    $('#e_room').val(room);
+    $('#e_weather').val(weather);
     $('.input-group-addon i').css('background-color', color);    
     setDropDown(admin,'e_admin'); 
 }
@@ -298,6 +300,13 @@ function dellamp()
             }
         }
     });
-}                                          
-                                          
-                                          
+}
+
+$('#say_what_action').click(function(e){
+
+    e.preventDefault();
+    var lid = $('#say_what').val();
+    $.get( "/index.php?c=home&a=say&what="+lid, function( data ) {
+
+    });
+});

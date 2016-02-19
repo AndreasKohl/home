@@ -18,6 +18,11 @@ class homeController
         require_once 'models/homeModel.php';
         $model = new homeModel();
         $user = $model->getUser($_SESSION[user_id]);
+        if($user['weather']==1)
+        {
+            $weather=$model->getWeather();
+            $this->_view->weathermap = $weather;
+        }
         $this->_view->title = TITEL_HOME;
         $this->_view->display('home/index.tpl.php');
     }
@@ -187,6 +192,17 @@ class homeController
         //echo json_encode($user['room']);
     }
 
+    public function sayAction()
+    {
+        require_once 'models/homeModel.php';
+        $model = new homeModel();
+        $settings = $model->settings();
+        $say = $_GET['what'];
+        if(empty($say))$say = 'du musst in das Feld schon etwas rein schreiben';
+        $espeak = '"'.$say.' '.$model->getSarkasmus($settings['sarkasmus']).'"';
+//        shell_exec("sudo /usr/bin/espeak -vde+".ESPEAK_voice." " . $espeak . " 2>/dev/null");
+        $model->say($espeak);
+    }
 
     public function setAction()
     {
@@ -197,6 +213,7 @@ class homeController
             $model = new homeModel();
             // get device data
             $device = $model->getDeviceById($lampid);
+            $settings = $model->settings();
             if ($str[1] == "on") {
                 $lampset = "1";
             } elseif ($str[1] == "off") {
@@ -208,11 +225,12 @@ class homeController
             // execute rcswitch-pi
             shell_exec("sudo /home/pi/rcswitch-pi/send $co $letter $lampset");
             if ($str[1] == "on") {
-                $espeak = '"Lampe ' . $lampid . ' ist an"';
+                $espeak = '"schalte '.$device['device'].' an '.$model->getSarkasmus($settings['sarkasmus']).'"';
             } else {
-                $espeak = '"Lampe ' . $lampid . ' ist aus"';
+                $espeak = '"schalte '.$device['device'].' aus '.$model->getSarkasmus($settings['sarkasmus']).'"';
             }
-            shell_exec("sudo /usr/bin/espeak -vde+m1 " . $espeak . " 2>/dev/null");
+            $model->say($espeak);
+            //shell_exec("sudo /usr/bin/espeak -vde+".ESPEAK_voice." " . $espeak . " 2>/dev/null");
 
 
             // Set device status

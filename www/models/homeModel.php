@@ -74,7 +74,19 @@ class homeModel
         return $settings;          
   }
    
-    
+  public function getSarkasmus($event)
+  {
+      echo $event;
+      if($event == 'true')$ret =". du, ". file_get_contents('http://www.los-schimpfos.de/schimpfos-wortos.php');
+      else $ret = '';
+      return $ret;
+  }
+
+  public function say($espeak)
+  {
+      shell_exec("sudo /usr/bin/espeak -vde+".ESPEAK_voice." " . $espeak . " 2>/dev/null");
+  }
+
   public function getAllRooms()
   {  
         foreach($this->_con->query('SELECT * from '.PREFIX.'rooms ') as $row) { $rooms[] = $row; }      

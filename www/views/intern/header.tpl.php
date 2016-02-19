@@ -25,6 +25,7 @@ if($settings['weather_option']=="c_kms"){
     <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-touch-icon-144-precomposed.png"> 
     <link rel="shortcut icon" href="assets/icon/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-colorpicker.min.css" rel="stylesheet">   
     <link href="assets/css/style.css" rel="stylesheet">
@@ -39,7 +40,7 @@ if($settings['weather_option']=="c_kms"){
 
 
 
-  <div class="row">
+  <div>
       <!-- uncomment code for absolute positioning tweek see top comment in css -->
       <!-- <div class="absolute-wrapper"> </div> -->
       <!-- Menu -->
@@ -66,7 +67,7 @@ if($settings['weather_option']=="c_kms"){
 
                       <!-- Search -->
                       <a data-toggle="collapse" href="#search" class="btn btn-default" id="search-trigger">
-                          <span class="glyphicon glyphicon-search"></span>
+                          <span class="fa fa-comment-o"></span>
                       </a>
 
                       <!-- Search body -->
@@ -74,9 +75,9 @@ if($settings['weather_option']=="c_kms"){
                           <div class="panel-body">
                               <form class="navbar-form" role="search">
                                   <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Search">
+                                      <input type="text" class="form-control" placeholder="Say whaaaat ... " id="say_what">
                                   </div>
-                                  <button type="submit" class="btn btn-default "><span class="glyphicon glyphicon-ok"></span></button>
+                                  <button type="submit" class="btn btn-default" id="say_what_action"><span class="glyphicon glyphicon-ok"></span></button>
                               </form>
                           </div>
                       </div>
@@ -161,7 +162,7 @@ if($settings['weather_option']=="c_kms"){
                               <i class="owf owf-<?php echo $weather['weather_code'];?>"></i>
                           </div>
                           <div class="col-xs-7 weather_text text-center">
-                              <h3><?php echo $settings['city']; ?> <br/> <small> <?php echo $weather['title'];?> <?php echo $weather['description'];?> </small></h3>
+                              <h3><?php echo $settings['city']; ?> <br/> <small> <b><?php echo $weather['title'];?></b> <?php echo $weather['description'];?> </small></h3>
                           </div>
                           <div class="col-xs-12 weather_temp"><?php echo $temp." ".$tsign;?></div>
                       </div>

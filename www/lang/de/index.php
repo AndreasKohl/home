@@ -16,6 +16,9 @@ define('LOGO', '<i class="fa fa-home"></i>');
 define('TITLE_DEFAULT', 'Casa');
 define('COPY', ' &copy '.date('Y').'</b>');
 
+/* espeak */
+define('ESPEAK_voice', 'm1');
+
 /* Navigation */
 define('NAV_home', 'Lampen');
 define('NAV_alloff', 'Alle Aus');
@@ -122,6 +125,7 @@ define('SET_user', 'Benutzer');
 define('SET_pass', 'Passwort');
 define('SET_caldav_url', 'CalDav Url');
 define('weather_api', 'OpenWeather API Key');
+define('SET_sarkasmus', 'Sarkasmus');
 
 /* Edit Password */    
 define('PWCH_HEADLINE', 'Passwort ändern');

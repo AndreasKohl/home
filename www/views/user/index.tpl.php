@@ -217,7 +217,7 @@
                                 
                     <a onclick="shwokey('<?php echo $user['apikey'];?>')" data-toggle="modal" data-target="#api_key" title="API Key" class="btn btn-default">
                         <i class="fa fa-key"></i></a>
-                                <a onclick="setUser('<?php echo $user['id'];?>','<?php echo $user['pass'];?>','<?php echo $user['user'];?>','<?php echo $user['name'];?>','<?php echo $user['admin'];?>','<?php echo $user['color'];?>')" data-toggle="modal" data-target="#edit_user" title="Bearbeiten" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                <a onclick="setUser('<?php echo $user['id'];?>','<?php echo $user['pass'];?>','<?php echo $user['user'];?>','<?php echo $user['name'];?>','<?php echo $user['admin'];?>','<?php echo $user['color'];?>','<?php echo $user['room'];?>','<?php echo $user['weather'];?>')" data-toggle="modal" data-target="#edit_user" title="Bearbeiten" class="btn btn-default"><i class="fa fa-pencil"></i></a>
                                 <a onclick="setDelUserID('<?php echo $user['id'];?>')" data-toggle="modal" data-target="#del_user" title="Löschen" class="btn btn-default"><i class="fa fa-trash"></i></a>
                             </div>
                         </div>
