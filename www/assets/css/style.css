@@ -6,21 +6,29 @@ html {
   height:100%; 
   width:100%; 
   margin:0;
-  font-family: Roboto;
+    font-family: "Titillium Web";
 }
 
 body{
-  font-family: Roboto;
+    font-family: "Titillium Web";
 	margin-bottom: 95px;
 	height:100%; 
 	width:100%; 
 	margin:0;
+    color: white !important;
     
     background:#f7f7f7 url(../img/bg_login2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Titillium Web";
+}
+.settings li a:hover{
+    color: #000;
 }
 .navbar-default .navbar-toggle{
         background: rgba(0,0,0,0);
@@ -35,7 +43,14 @@ body{
     background: transparent;
     color: white;
 }
-
+.settings label{
+    color: white;
+    font-family: "Titillium Web";
+}
+.tab-content
+{
+    background-color: rgba(0, 0, 0, 0.26);
+}
 .lights{
     padding-top: 10px;
     background: transparent;
@@ -60,6 +75,7 @@ body{
 .device{
     font-size: 1.4em;
     font-weight: 100;
+    font-family: "Titillium Web";
 }
 .lights small{
     font-weight: 300;
@@ -145,6 +161,11 @@ h3{
 
 
 .headline{
+    color: #FFF;
+    font-family: "Titillium Web";
+    font-size: 48px;
+    letter-spacing: -0.03em;
+
     margin-left:35px;
     margin-bottom:25px;
 }
@@ -326,7 +347,6 @@ h3{
 .home-weather .weather_icon{
     font-size: 7em;
     line-height: 0;
-    color: rgb(108, 114, 132);
 }
 .home-weather .weather_temp{
     margin-top: 20px;
@@ -464,6 +484,8 @@ b.fa-chevron-down{
     border-radius: 0;
     background-color: transparent;
     box-shadow: none;
+    font-family: "Titillium Web";
+    font-size: 1.1em;
 }
 .side-menu #dropdown .caret {
     float: right;
@@ -561,9 +583,14 @@ b.fa-chevron-down{
         border-left:0px;
         text-align: left;
     }
+
     .home-weather .weather_icon{
         font-size: 50px;
         padding-top: 20px;
+    }
+    .home-weather .weather_temp{
+        margin-top: 20px;
+        font-size: 2em;
     }
     .side-menu {
         position: relative;

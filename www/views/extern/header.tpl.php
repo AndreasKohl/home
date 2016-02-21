@@ -11,7 +11,8 @@
     <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-touch-icon-144-precomposed.png">     
     <link rel="shortcut icon" href="assets/icon/favicon.png">
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.css" rel="stylesheet">      
     <link href="assets/css/signin.css" rel="stylesheet">
 
@@ -22,12 +23,6 @@
   </head>
   <body>
   
-  	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">          
-          <a class="navbar-brand" href="<?php echo BASE; ?>"><?php echo LOGO;?></a>
-        </div>
-      </div>
-    </div>      
+
 
 	<div id="top"></div>	
